@@ -133,16 +133,95 @@ Für bibliographische Daten aus dem Stabikat:
 https://lab.sbb.berlin/bibliographische-daten-aus-dem-stabikat/
 
 Für Daten aus den Digitalisierten Sammlungen
-https://lab.sbb.berlin/dc/ :sparkles:
+https://lab.sbb.berlin/dc/
 
---
+---
 ### Digitalisierte Sammlungen
 Was gibt es überhaupt in den digitalisierten Sammlungen?
 
 https://digital.staatsbibliothek-berlin.de/
 
 
-> Wie viele Medien gibt es insgesamt? 
+>  Wie viele Medien gibt es insgesamt?
+
+--
+https://oai.sbb.berlin/?verb=ListIdentifiers&metadataPrefix=oai_dc&set=all
+
+--
+<img src="media/oai_all.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+<img src="media/oai_all_xml.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+* https://oai.sbb.berlin
+  * ?verb:
+     * GetRecord
+    * Identify
+    * ListIdentifiers
+    * ListMetadataformats
+    * ListRecords
+    * ListSets
+            
+
+---
+### Bilder und Volltexte
+
+<img src="https://content.staatsbibliothek-berlin.de/dc/PPN86053572X-00000255/132,280,788,187/full/180/default.png">
+
+https://content.staatsbibliothek-berlin.de/dc/PPN86053572X-00000255/132,280,788,187/full/180/default.png <!-- .element: class="fragment" -->
+
+--
+https://content.staatsbibliothek-berlin.de/dc/
+  * PPN **PPN86053572X**
+  * Seite **00000255**
+  * x-Position **132**
+  * y-Position **280**
+  * Breite **788**
+  * Höhe **187**
+  * Auflösung **full**
+  * Drehung **180**
+  * Format **png**  *alternativ: .tif .jpg*
+
+--
+<img src="https://content.staatsbibliothek-berlin.de/dc/PPN1770469869-0072/380,950,600,1050/full/0/default.png" height="600" style="float:left">
+
+Werkzeuge ausschneiden!
+
+https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN1770469869&PHYSID=PHYS_0072&DMDID=DMDLOG_0027&view=overview-toc
+
+
+--
+Wie aber bekommen wir die Koordinaten?
+* z.B. aus einer OCR Layouterkennung
+* Wenn bereits Volltext vorliegt: Aus den Volltextdateien
+
+--
+https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN86053572X&PHYSID=PHYS_0255
+
+<pre><code data-trim data-noescape>
+  <xmp><Illustration ID="Page1_Block2" HEIGHT="177" WIDTH="788" VPOS="290" HPOS="132"/></xmp>
+    </code></pre>
+
+
+
+
+---
+## Über den Stabi-Tellerrand
+
+Andere Bibliotheken/Bibliothekssysteme, andere Identifier (und Schnittstellen)
+
+### BNF/Gallica
+
+
+
+
+
+--
+  <iframe data-src="https://hakim.se" data-preload></iframe>
+
+
+
     
 </section>
          
@@ -159,5 +238,13 @@ https://digital.staatsbibliothek-berlin.de/
     plugins: [ RevealMarkdown ]
   });
     </script>
+
+<link rel="stylesheet" href="plugin/highlight/monokai.css">
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    plugins: [ RevealHighlight ]
+  });
+</script>
   </body>
 </html>
