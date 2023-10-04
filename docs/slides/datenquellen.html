@@ -63,14 +63,20 @@
           --
 ## über dich 
 Du bist
-* ... Literaturwissenschaftler*in <!-- .element: class="fragment" -->
-* ... Historiker*in <!-- .element: class="fragment" -->
-* ... Soziolog*in <!-- .element: class="fragment" -->
-* ... Linguist*in <!-- .element: class="fragment" -->
-* ... Digitale\*r Geisteswissenschaftler*in <!-- .element: class="fragment" -->
-* ... Bibliothekar*in <!-- .element: class="fragment" -->
-* ... Programmierer*in <!-- .element: class="fragment" -->
-* ... ?<!-- .element: class="fragment" -->
+* ... Literaturwissenschaftler*in
+* ... Historiker*in 
+* ... Soziolog*in 
+* ... Linguist*in 
+* ... Digitale\*r Geisteswissenschaftler*in 
+* ... Bibliothekar*in
+* ... Programmierer*in 
+* ... ?
+
+--
+
+[Umfrage](https://terminplaner4.dfn.de/3pX6x2OdGI7ifmvS) <!-- .element: class="fragment" -->
+
+[Umfrage](https://terminplaner.dfn.de/3pzdsyvWAlfgAjT8) <!-- .element: class="fragment" -->
 
 ---
 ### Überblick über die Reihe
@@ -157,10 +163,10 @@ Was gibt es überhaupt in den digitalisierten Sammlungen?
 https://digital.staatsbibliothek-berlin.de/
 
 
->  Wie viele Medien gibt es insgesamt? <!-- .element: class="fragment" -->
+>  Wie viele Medien mit Volltext gibt es insgesamt? <!-- .element: class="fragment" -->
 
 --
-https://oai.sbb.berlin/?verb=ListIdentifiers&metadataPrefix=oai_dc&set=all
+https://oai.sbb.berlin/?verb=ListIdentifiers&metadataPrefix=oai_dc&set=ocr.fulltext
 
 --
 <img src="media/oai_all.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
@@ -177,7 +183,10 @@ https://oai.sbb.berlin/?verb=ListIdentifiers&metadataPrefix=oai_dc&set=all
     * ListMetadataformats
     * ListRecords
     * ListSets
-            
+
+--
+
+Metadaten vs. Daten
 
 ---
 ### Bilder und Volltexte
@@ -187,7 +196,7 @@ https://oai.sbb.berlin/?verb=ListIdentifiers&metadataPrefix=oai_dc&set=all
 https://content.staatsbibliothek-berlin.de/dc/PPN86053572X-00000255/132,280,788,187/full/180/default.png <!-- .element: class="fragment" -->
 
 --
-https://content.staatsbibliothek-berlin.de/dc/
+{scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}
   * PPN **PPN86053572X**
   * Seite **00000255**
   * x-Position **132**
@@ -198,12 +207,13 @@ https://content.staatsbibliothek-berlin.de/dc/
   * Drehung **180**
   * Format **png**  *alternativ: .tif .jpg*
 
+
+
 --
-<img src="https://content.staatsbibliothek-berlin.de/dc/PPN1770469869-0072/380,950,600,1050/full/0/default.png" height="600" style="float:left">
+<img src="https://content.staatsbibliothek-berlin.de/dc/PPN1770469869-0072/380,950,600,1050/full/0/default.png" height="400" style="float:left">
 
-Werkzeuge ausschneiden!
+[Werkzeuge ausschneiden!](https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN1770469869&PHYSID=PHYS_0072&DMDID=DMDLOG_0027&view=overview-toc)
 
-https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN1770469869&PHYSID=PHYS_0072&DMDID=DMDLOG_0027&view=overview-toc
 
 
 --
@@ -224,13 +234,37 @@ https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN86053572X&PHYSID=P
 ---
 ## Über den Stabi-Tellerrand
 
-Andere Bibliotheken/Bibliothekssysteme, andere Identifier (und Schnittstellen)
+Andere Bibliotheken/Bibliothekssysteme, andere Identifier (und Schnittstellen) 
+
+---
 
 ### BNF/Gallica
 
+---
+
+### LOC 
+
+https://chroniclingamerica.loc.gov/
+
+siehe Abgail Walker: [Getting Data for Digital Humanities with APIs: A Gentle Introduction](https://studentwork.prattsi.org/dh/2019/05/13/getting-data-for-digital-humanities-with-apis/)
+
+--
+
+[Suche nach "suffrage" in Zeitungen aus dem Bundestaat Nevada (1870--1910)](https://chroniclingamerica.loc.gov/search/pages/results/?state=Nevada&date1=1870&date2=1910&proxtext=suffrage&x=16&y=5&dateFilterType=yearRange&rows=20&searchType=basic)
+
+<img src="media/suffrage.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
 
 
+[Suche mit Endung "&format=json"](https://chroniclingamerica.loc.gov/search/pages/results/?state=Nevada&date1=1870&date2=1910&proxtext=suffrage&x=16&y=5&dateFilterType=yearRange&rows=20&searchType=basic&format=json)
 
+<img src="media/suffrage-json.png" style="height: 400px; margin: 0 auto 4rem auto; background: transparent;">
+
+lccn: [library of congress control number](https://de.wikipedia.org/wiki/Library_of_Congress_Control_Number)
+
+
+--
 
 --
   <iframe data-src="https://hakim.se" data-preload></iframe>
@@ -260,6 +294,10 @@ Andere Bibliotheken/Bibliothekssysteme, andere Identifier (und Schnittstellen)
   Reveal.initialize({
     plugins: [ RevealHighlight ]
   });
+
+  .uri {
+  word-break: break-all;
+}
 </script>
   </body>
 </html>
