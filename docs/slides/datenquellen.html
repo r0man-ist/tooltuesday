@@ -53,9 +53,9 @@
           - im Moment zwischen Oxford und Berlin
           - **kein** Programmierer
           
-          ... aber interessiert an digitalen Methoden
+          ... aber interessiert an digitalen Methoden <!-- .element: class="fragment" -->
 
-          - Aktuelles Projekt zur französischen Dichtung des 18. Jahrhunderts: u.a. mit *sequence alignment*
+          Aktuelles Projekt zur französischen Dichtung des 18. Jahrhunderts: u.a. mit sequence alignment <!-- .element: class="fragment" -->
 
           roman.kuhn@sbb.spk-berlin.de <!-- .element: class="fragment" -->
         
@@ -184,6 +184,7 @@ https://oai.sbb.berlin/?verb=ListIdentifiers&metadataPrefix=oai_dc&set=ocr.fullt
     * ListRecords
     * ListSets
 
+    https://www.openarchives.org/OAI/openarchivesprotocol.html
 --
 
 Metadaten vs. Daten
@@ -214,6 +215,8 @@ https://content.staatsbibliothek-berlin.de/dc/PPN86053572X-00000255/132,280,788,
 
 [Werkzeuge ausschneiden!](https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN1770469869&PHYSID=PHYS_0072&DMDID=DMDLOG_0027&view=overview-toc)
 
+https://iiif.io/api/image/3.0/#41-region
+https://iiif.io/api/image/3.0/#42-size
 
 
 --
@@ -228,7 +231,20 @@ https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN86053572X&PHYSID=P
   <xmp><Illustration ID="Page1_Block2" HEIGHT="177" WIDTH="788" VPOS="290" HPOS="132"/></xmp>
     </code></pre>
 
+--
 
+https://content.staatsbibliothek-berlin.de/dc/PPN86053572X-00000255/full/full/0/default.png?highlight=132,290,788,177&highlightColor=ff0000
+
+
+--
+
+## Volltexte
+
+https://content.staatsbibliothek-berlin.de/dc/86053572X-0255.ocr.xml
+
+https://content.staatsbibliothek-berlin.de/dc/86053572X.ocr.zip
+
+https://content.staatsbibliothek-berlin.de/dc/PPN86053572X.ocr.txt
 
 
 ---
@@ -240,6 +256,27 @@ Andere Bibliotheken/Bibliothekssysteme, andere Identifier (und Schnittstellen)
 
 ### BNF/Gallica
 
+[Gallica](https://gallica.bnf.fr/)
+
+https://api.bnf.fr/
+https://api.bnf.fr/fr/api-document-de-gallica
+
+--
+
+Statt PPN: ARK (https://arks.org/)
+
+Alle Ausgaben des *Nouveau Mercure galant* in Gallica:
+
+https://gallica.bnf.fr/ark:/12148/cb40216990r/date.r= <!-- .element: class="fragment" -->
+
+--
+
+https://gallica.bnf.fr/services/Issues?ark=cb40216990r
+
+https://gallica.bnf.fr/services/Issues?ark=cb40216990r/date&date=1714 <!-- .element: class="fragment" -->
+
+https://gallica.bnf.fr/ark:/12148/bpt6k63194664.texteBrut <!-- .element: class="fragment" -->
+
 ---
 
 ### LOC 
@@ -250,7 +287,7 @@ siehe Abgail Walker: [Getting Data for Digital Humanities with APIs: A Gentle In
 
 --
 
-[Suche nach "suffrage" in Zeitungen aus dem Bundestaat Nevada (1870--1910)](https://chroniclingamerica.loc.gov/search/pages/results/?state=Nevada&date1=1870&date2=1910&proxtext=suffrage&x=16&y=5&dateFilterType=yearRange&rows=20&searchType=basic)
+[Suche nach "suffrage" in Zeitungen aus dem Bundestaat Nevada (1870–1910)](https://chroniclingamerica.loc.gov/search/pages/results/?state=Nevada&date1=1870&date2=1910&proxtext=suffrage&x=16&y=5&dateFilterType=yearRange&rows=20&searchType=basic)
 
 <img src="media/suffrage.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
 
@@ -263,21 +300,19 @@ siehe Abgail Walker: [Getting Data for Digital Humanities with APIs: A Gentle In
 
 lccn: [library of congress control number](https://de.wikipedia.org/wiki/Library_of_Congress_Control_Number)
 
+---
 
---
+## Danke für die Aufmerksamkeit
 
---
-  <iframe data-src="https://hakim.se" data-preload></iframe>
-
+27.11.2023: [OpenRefine](https://openrefine.org/)
 
 
-    
 </section>
-         
+
+
         </script>
         
       </div></div></body>
-    </div>
    
     <script src="dist/reveal.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
