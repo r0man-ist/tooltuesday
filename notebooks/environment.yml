@@ -1,0 +1,6 @@
+name: ner
+channels:
+  - defaults
+dependencies:
+  - pip=18.1
+  - spacy=2.0.16
