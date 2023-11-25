@@ -1,8 +1,0 @@
-name: ner-env
-channels:
-  - conda-forge
-dependencies:
-  - python
-  - pip
-  - pip:
-    - spacy
