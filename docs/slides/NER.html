@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+		<title>Stabi Tool Tuesday</title>
+
+		<meta name="description" content="A colaborative learning space for all things DH">
+		<meta name="author" content="Roman Kuhn">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+         <section data-markdown data-separator="^\n---\n" data-separator-vertical="^\n--\n" data-separator-vertical="^\n--\n" data-charset="utf-8">
+          <script type="text/template">
+          <!--content goes here-->
+
+          ## Stabi Tool Tuesday
+          ### 4 - NER <!-- .element: class="fragment" -->
+          05.12.2023
+
+          ---
+          ### Tool Tuesday
+          Ein kollaborativer Raum, um DH-Methoden und tools zu diskutieren... auszuprobieren... zu experimentieren...
+
+          ...manchmal auch zu scheitern?
+
+          --
+
+          ### no code
+          (für den Moment jedenfalls)
+
+          --
+
+          ### ~no code~
+          ### some code
+         
+
+          --
+          
+          Folien und weitere Materialien finden sich hier: https://github.com/r0man-ist/tooltuesday
+
+          Die heutigen Folien hier: https://r0man-ist.github.io/tooltuesday/slides/OCR-HTR.html
+
+          Kontakt: roman.kuhn@sbb.spk-berlin.de
+
+---
+### Überblick über die Reihe
+jeden zweiten Dienstag
+
+im Moment sechs Termine fest geplant:
+* Datenquellen und Schnittstellen
+* Datenstrukturierung mit OpenRefine
+* OCR/HTR
+* **Named Entity Recognition (NER)**
+* Topic Modeling
+* Netzwerkvisualierung (Gephi)
+
+
+--
+Orientiert an einer (prototypischen) DH-'pipeline'
+
+Forschungsidee/Forschungsfrage
+
+&#8618; Daten suchen (und finden); Daten generieren
+
+&#8618; Daten aufbereiten
+
+&#8618; Daten auswerten, transformieren
+
+&#8618; Ergebnisse (und neue Daten) publizieren/visualisieren
+
+--
+Weitere Termine/Themen bei Bedarf
+
+Bring your own data
+
+
+
+
+---
+### NER - Named Entity Recognition
+
+Was sind Named Entities? <!-- .element: class="fragment" -->
+
+Übliche Entities: PER - ORG - LOC<!-- .element: class="fragment" -->
+
+Mitunter auch: Money, Percent, Time, e-mail, Telephonnummer, Twitter handle, etc. pp.<!-- .element: class="fragment" -->
+
+In der Regel ohne 'nesting': Freie Universität Berlin -- ORG (aber "Berlin" nicht zusätzlich als GPE)<!-- .element: class="fragment" -->
+
+Im Grunde ist es aber durchaus möglich, weitere Entity-typen zu definieren und Modelle darauf zu trainieren; auch Entity-Label können frei vergeben werden<!-- .element: class="fragment" -->
+
+---
+
+### Verfahren
+
+Regelbasiert vs. statistisch (machine learning)
+
+---
+
+### Überprüfung der Ergebnisse
+
+Abgleich mit Gold standard/ground truth
+
+Häufig verwendeter Wert: F-Score (Harmonisches Mittel aus Precision und Recall)
+
+--
+
+<img src="media/precirecall.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+
+---
+
+### Stanford Named Entity Recognizer
+https://nlp.stanford.edu/software/CRF-NER.shtml
+
+Deutsches Modell:
+[Dropbox](https://www.dropbox.com/s/mfnj349ezc1y8x1/german.conll.germeval2014.hgc_175m_600.crf.ser.gz?dl=0)
+
+
+
+
+https://www.java.com/de/download/manual.jsp 
+
+(vgl.: Mareike Schumacher (2019): „Named Entity Recognition mit dem Stanford Named Entity Recognizer“. In: forTEXT. Literatur digital erforschen. [URL](https://fortext.net/routinen/lerneinheiten/named-entity-recognition-mit-dem-stanford-named-entity-recognizer))
+
+--
+
+<img src="media/stanfordner.png" style="height: 400px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+Exportformat
+
+
+<img src="media/neroutput.png" style="height: 400px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+--
+
+### Training
+
+Kapitel 1-3 als Trainingsdaten Kap. 4 als Evaluation
+
+--
+
+### Tokenization
+
+<pre><code data-trim data-noescape>
+  <xmp>java -cp stanford-ner.jar edu.stanford.nlp.process.PTBTokenizer ..\fontane_brandenburg01_1862_ch1.txt > ..\fontane_brandenburg01_1862_ch1.tok</xmp>
+    </code></pre>
+
+--
+
+### Erstellen von Ground Truth
+
+
+<img src="media/tsv.png" style="height: 400px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+--
+
+### Properties
+<pre><code data-trim data-noescape>
+  <xmp>trainFile = ../fontane_brandenburg01_1862_ch1.tsv
+    serializeTo = ner-modelFontane.ser.gz
+    map = word=0,answer=1
+    useClassFeature=true
+    useWord=true
+    useNGrams=true
+    noMidNGrams=true
+    maxNGramLeng=6
+    usePrev=true
+    useNext=true
+    useSequences=true
+    usePrevSequences=true
+    maxLeft=1
+    useTypeSeqs=true
+    useTypeSeqs2=true
+    useTypeySequences=true
+    wordShape=chris2useLC
+    useDisjunctive=true</xmp>
+    </code></pre>
+
+
+--
+
+### Modell tranieren
+<pre><code data-trim data-noescape>
+  <xmp>java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -prop ../Fontane.prop</xmp>
+    </code></pre>
+
+--
+
+### Trainingsdaten vorbereiten (lassen)
+
+<pre><code data-trim data-noescape>
+  <xmp>java -mx600m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -outputFormat
+    tsv 2 -textFile sample.txt > sample.tsv</xmp>
+    </code></pre>
+
+---
+
+### Alternativer Use-case
+
+Gender-Klassifizierung in Erzähltexten:
+
+https://zenodo.org/records/5555952
+
+
+---
+
+### spaCy
+
+https://spacy.io/
+
+
+Modelle für NER in diversen Sprachen; unterschiedliche Größen
+
+--
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/r0man-ist/tooltuesday/HEAD?labpath=binder%2Fner)
+
+
+---
+## Import
+
+[Beispiel: Brief von Hippolyte de Chamisso an Adelbert von Chamisso](https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN73975503X&PHYSID=PHYS_0001&view=picture-download)
+
+[PDF](https://github.com/r0man-ist/tooltuesday/blob/main/PPN73975503X.pdf)
+
+--
+
+Web-App: Import aus jpg oder PDF
+
+Expert Client: Import auch aus IIIF Manifest, Ordner, etc.
+
+---
+
+## Segmentierung
+
+<img src="media/transkribus_layout.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+## Erkennung
+
+Modelle
+
+Tags
+
+Struktur-tags
+
+Text-tags
+
+--
+
+## Versionsverlauf
+
+<img src="media/transkribus_versions.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+---
+
+## Ergebnisse beurteilen
+
+CER/WER im Expert Client berechnen
+
+<img src="media/transkribus-compare.png" style="height: 100px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+---
+
+## Modelltraining
+
+<img src="media/transkribus-model.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+
+---
+
+## Export und Exportformate
+
+Web-App: XML (Page, Alto), PDF, DOCX
+
+Client: Auch TEI (via XSLT), Excel, TXT
+
+
+---
+
+### Tabellen und Formulare
+
+<img src="media/transkribus-table.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+---
+
+## Danke für die Aufmerksamkeit
+
+05.12.2023: Named Entity Recognition
+</section>
+         
+        </script>
+        
+      </div></div></body>
+    </div>
+    <script src="raphael-min.js"><
+      <script src="flowchart-latest.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    
+    <script>
+      Reveal.initialize({
+    plugins: [ RevealMarkdown ]
+  });
+    </script>
+    
+    .two-floating-elements {
+  > ul ~ p,
+  > p ~ ul {
+    max-width: 50%;
+    float:left;
+    font-size: 0.7em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  > p ~ ul {
+    margin-left: 0;
+  }
+}
+
+  </body>
+</html>
