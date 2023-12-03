@@ -229,84 +229,47 @@ Modelle für NER in diversen Sprachen; unterschiedliche Größen
 
 --
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/r0man-ist/tooltuesday/HEAD?labpath=binder%2Fner)
+### Notebook 
+(basieren auf: Mattingly, William. [Introduction to Named Entity Recognition](ner.pythonhumanities.com), 2021 (2nd ed.))
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/r0man-ist/tooltuesday/HEAD?labpath=binder%2Fner.ipynb)
 
 
 ---
-## Import
+## Flair
 
-[Beispiel: Brief von Hippolyte de Chamisso an Adelbert von Chamisso](https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN73975503X&PHYSID=PHYS_0001&view=picture-download)
 
-[PDF](https://github.com/r0man-ist/tooltuesday/blob/main/PPN73975503X.pdf)
+https://github.com/flairNLP/flair
+
+Tutorial zu NER mit Flair:
+https://flairnlp.github.io/docs/tutorial-basics/entity-linking
+
+---
+
+Stabi-NER
+
+https://github.com/qurator-spk/sbb_ner
+
+Tool zum Korrigieren/Erstellen von Ground Truth: 
+https://github.com/qurator-spk/neat
 
 --
 
-Web-App: Import aus jpg oder PDF
+Testinstanz:
 
-Expert Client: Import auch aus IIIF Manifest, Ordner, etc.
+Hier für [PPN839790120](https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN839790120&PHYSID=PHYS_0008)
 
----
-
-## Segmentierung
-
-<img src="media/transkribus_layout.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
-
---
-
-## Erkennung
-
-Modelle
-
-Tags
-
-Struktur-tags
-
-Text-tags
-
---
-
-## Versionsverlauf
-
-<img src="media/transkribus_versions.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+[LINK](https://ravius.sbb.berlin/sbb-tools/index.html?ppn=839790120&model_id=precomputed&el_model_id=precomputed&task=ner)
 
 
----
-
-## Ergebnisse beurteilen
-
-CER/WER im Expert Client berechnen
-
-<img src="media/transkribus-compare.png" style="height: 100px; margin: 0 auto 4rem auto; background: transparent;">
-
-
----
-
-## Modelltraining
-
-<img src="media/transkribus-model.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
-
-
-
----
-
-## Export und Exportformate
-
-Web-App: XML (Page, Alto), PDF, DOCX
-
-Client: Auch TEI (via XSLT), Excel, TXT
-
-
----
-
-### Tabellen und Formulare
-
-<img src="media/transkribus-table.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
 
 ---
 
 ## Danke für die Aufmerksamkeit
 
-05.12.2023: Named Entity Recognition
+19.12.2023: Topic Modeling
+
+
 </section>
          
         </script>
@@ -324,20 +287,6 @@ Client: Auch TEI (via XSLT), Excel, TXT
   });
     </script>
     
-    .two-floating-elements {
-  > ul ~ p,
-  > p ~ ul {
-    max-width: 50%;
-    float:left;
-    font-size: 0.7em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  > p ~ ul {
-    margin-left: 0;
-  }
-}
 
   </body>
 </html>
