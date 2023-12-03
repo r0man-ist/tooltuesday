@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>neat</title>
+    <base href="neat.html" target="_blank" rel="noopener noreferrer">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.0/papaparse.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/keypress/2.1.5/keypress.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+
+    <style>
+        @font-face {
+            font-family: aletheiaSans;
+            src: url('fonts/aletheiasans-webfont.eot');
+            src: url('fonts/aletheiasans-webfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/aletheiasans-webfont.woff') format('woff'),
+            url('fonts/aletheiasans-webfont.ttf') format('truetype'),
+            url('fonts/aletheiasans-webfont.svg#DejaVuSansBook') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{font-family:Verdana;font-size:16px}
+
+        .hg-theme-default {
+          font-family: aletheiaSans
+        }
+
+        td {
+          font-family: aletheiaSans
+        }
+
+        table{table-layout:fixed;width:100%;text-align:center}
+        th{background-color:lightgray}
+        .editable:focus{background-color:#f0e442 !important}
+        tr:focus-within{background-color:#dddddd !important}
+
+        .accordion:hover .accordion-item:hover .accordion-item-content,
+		.accordion .accordion-item--default .accordion-item-content{height:10.5em}
+		.accordion-item-content, .accordion:hover .accordion-item-content{height:0;overflow:hidden;transition:height.25s}
+		.accordion{padding:0;margin:auto;width:100px}
+		.accordion-item:hover{background-color:#f0e442}
+
+        .type_select:hover{background-color:#f0e442}
+
+        .ner_per{background-color:#56b3e9}
+        .ner_loc{background-color:#e69d00}
+        .ner_org{background-color:#df6caa}
+        .ner_work{background-color:#009e74}
+        .ner_conf{background-color:#0072b2}
+        .ner_evt{background-color:#a60a2d}
+        .ner_todo{background-color:#d55e00}
+
+        .fit-image{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        input[type=range]::-moz-focus-outer {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="row mt-5">
+
+        <div class="col-3">
+            <div id="file-region"></div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col text-center">
+                    <h3><a href="https://github.com/qurator-spk/neat" target="_blank" rel="noopener noreferrer" tabindex="-1">neat</a>: neat annotation tool</h3>
+                    <a href="https://github.com/qurator-spk/neat/blob/master/README.md#2-user-guide" target="_blank" rel="noopener noreferrer"  tabindex="-1">User Guide</a> | <a href="https://github.com/qurator-spk/neat/blob/master/Annotation_Guidelines.pdf" target="_blank" tabindex="-1">Annotation Guidelines</a> | <a href="https://github.com/qurator-spk/neat/issues" target="_blank" tabindex="-1">Issues</a><hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-1 text-center" id="btn-region">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-3" id="region-left">
+            <div id="preview-rgn" class="text-center">
+                <br>
+                <a href="" id="preview-link">
+                    <img id="preview" class="img-responsive fit-image"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-8 text-center" id="tableregion">
+            Please upload a TSV<sup>(<a href="https://github.com/qurator-spk/neat/blob/master/User_Guide.md#22-data-format">i</a>)</sup> file:
+            <br><br>
+            <input type="file" id="tsv-file" name="files"/>
+        </div>
+        <div class="col-1" id="region-right">
+        </div>
+    </div>
+    <div class="row  mt-3">
+            <div class="col-3">
+            </div>
+            <div class="col-8">
+                <div class="simple-keyboard"></div>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+    </div>
+
+<script src="neat.js"></script>
+</body>
+</html>
