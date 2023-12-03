@@ -154,6 +154,9 @@ Kapitel 1 als Trainingsdaten Kap. 2 als Evaluation
 
 (im 'echten Leben' wäre dieses Trainingsset natürlich zu klein!)
 
+
+https://nlp.stanford.edu/software/crf-faq.html
+
 --
 
 ### Tokenization
@@ -194,6 +197,7 @@ Kapitel 1 als Trainingsdaten Kap. 2 als Evaluation
     useDisjunctive=true</xmp>
     </code></pre>
 
+    [Liste verfügbarer properties](https://nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/ie/NERFeatureFactory.html)
 
 --
 
@@ -207,8 +211,7 @@ Kapitel 1 als Trainingsdaten Kap. 2 als Evaluation
 ### Trainingsdaten vorbereiten (lassen)
 
 <pre><code data-trim data-noescape>
-  <xmp>java -mx600m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -outputFormat
-    tsv 2 -textFile sample.txt > sample.tsv</xmp>
+  <xmp>java -mx600m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -outputFormat tsv 2 -textFile sample.txt > sample.tsv</xmp>
     </code></pre>
 
 ---
