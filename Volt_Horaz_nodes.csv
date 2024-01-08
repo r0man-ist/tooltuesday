@@ -4,41 +4,41 @@ id;label;type
 3;Algarotti;person
 4;Allamand;person
 5;Audibert;person
-6;baron de Montpéroux;person
+6;baron de MontpÃ©roux;person
 7;Capacelli;person
 8;Capperonnier de Gauffecourt;person
 9;Carlo Goldoni;person
 10;Caylus;person
 11;Charles Bordes;person
-12;Charles Étienne Pesselier;person
+12;Charles Ã‰tienne Pesselier;person
 13;Charles Pinot Duclos;person
-14;Charles Porée;person
+14;Charles PorÃ©e;person
 15;Christin;person
 16;Cideville;person
 17;Claude Brossette;person
-18;Clément;person
+18;ClÃ©ment;person
 19;Condorcet;person
 20;Constant de Rebecque;person
-21;Créqui-Monfort;person
+21;CrÃ©qui-Monfort;person
 22;Cromot Du Bourg;person
-23;d’Argenson;person
-24;d’Argental;person
-25;d’Hornoy;person
+23;dâ€™Argenson;person
+24;dâ€™Argental;person
+25;dâ€™Hornoy;person
 26;d'Alembert;person
 27;Damilaville;person
 28;d'Argental;person
 29;Darget;person
 30;de Bernis;person
 31;de Brosses;person
-32;de Châteauvieux;person
-33;de Chennevières;person
+32;de ChÃ¢teauvieux;person
+33;de ChenneviÃ¨res;person
 34;de Crousaz;person
 35;de La Chau;person
 36;de La Marche;person
 37;de Lisle;person
 38;de Montenoy;person
 39;de Ruffey;person
-40;de Rulhière;person
+40;de RulhiÃ¨re;person
 41;de Sade;person
 42;de Seytres;person
 43;de Tressan;person
@@ -50,27 +50,27 @@ id;label;type
 49;Dortous de Mairan;person
 50;Du Plessis-Villette;person
 51;duc de Choiseul;person
-52;Durey de Mesnières;person
-53;Élie Bertrand;person
-54;Élie de Beaumont;person
-55;Étienne Pasquier;person
+52;Durey de MesniÃ¨res;person
+53;Ã‰lie Bertrand;person
+54;Ã‰lie de Beaumont;person
+55;Ã‰tienne Pasquier;person
 56;Formey;person
 57;Formont;person
 58;Francis Hastings;person
-59;François Louis Defresnay;person
-60;François Tronchin;person
+59;FranÃ§ois Louis Defresnay;person
+60;FranÃ§ois Tronchin;person
 61;Frederick II;person
 62;Freiesleben;person
 63;George Keate;person
 64;Giuseppe Colpani;person
 65;Grimm;person
 66;Guy de Chabanon;person
-67;Helvétius;person
-68;Hénault;person
+67;HelvÃ©tius;person
+68;HÃ©nault;person
 69;Jean Bretin;person
 70;Jean de Vaines;person
 71;Jean Marie Arnoult;person
-72;Johann Samuel König;person
+72;Johann Samuel KÃ¶nig;person
 73;John Hervey;person
 74;Joseph de Menoux;person
 75;La Chalotais;person
@@ -81,14 +81,14 @@ id;label;type
 80;Le Nouvelliste du Parnasse;person
 81;Lebrun;person
 82;M. Berger;person
-83;M. Favières;person
+83;M. FaviÃ¨res;person
 84;Maillet Du Boullay;person
 85;Marin;person
 86;Marmontel;person
-87;marquis d’Argens;person
+87;marquis dâ€™Argens;person
 88;marquis de Pompignan;person
 89;marquis de Thibouville;person
-90;marquise d’Épinay;person
+90;marquise dâ€™Ã‰pinay;person
 91;Maupertuis;person
 92;Maurice de Saxe;person
 93;Mercier Dupaty;person
@@ -101,25 +101,25 @@ id;label;type
 100;Pierre Samuel Du Pont de Nemours;person
 101;Podewils;person
 102;R.;person
-103;René Joseph Tournemine;person
+103;RenÃ© Joseph Tournemine;person
 104;Richelieu;person
 105;Rolland Puchot, comte Des Alleurs;person
 106;Saurin;person
-107;Sauvé;person
-108;Sébastien Dupont;person
-109;Sénac de Meilhan;person
+107;SauvÃ©;person
+108;SÃ©bastien Dupont;person
+109;SÃ©nac de Meilhan;person
 110;Shuvalov;person
-111;Simon Louis Pierre de Cubières;person
+111;Simon Louis Pierre de CubiÃ¨res;person
 112;Sir Everard Fawkener;person
-113;Théodore Tronchin;person
+113;ThÃ©odore Tronchin;person
 114;Thieriot;person
 115;Tronchin;person
 116;Trublet;person
 117;Trudaine de Montigny;person
 118;Turgot;person
 119;Vauvenargues;person
-120;von Schönberg;person
-121;Ximénès;person
+120;von SchÃ¶nberg;person
+121;XimÃ©nÃ¨s;person
 122;Paolo Emilio Campi;person
 123;Odes III,29;poem
 124;Epistles I,1;poem
@@ -133,7 +133,7 @@ id;label;type
 132;Satires II,3;poem
 133;Odes II,6;poem
 134;Satires I,1;poem
-135;Art poétique;poem
+135;Art poÃ©tique;poem
 136;Odes II,18;poem
 137;Odes I,3;poem
 138;Odes II,16;poem
