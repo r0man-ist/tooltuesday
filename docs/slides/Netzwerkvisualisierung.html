@@ -24,7 +24,7 @@
           <!--content goes here-->
 
           ## Stabi Tool Tuesday
-          ### 6 - Netzwerkvisualierung (u.a. mit Gephi) <!-- .element: class="fragment" -->
+          ### 6 - Netzwerkvisualierung (Gephi) <!-- .element: class="fragment" -->
           09.01.2024
 
           ---
@@ -78,100 +78,166 @@ Weitere Termine/Themen bei Bedarf
 
 Bring your own data
 
+---
 
+### Vorab
+
+Gephi
+
+https://gephi.org/users/download/
 
 
 ---
-### Netzwerke
+### Netzwerkvisualierung
 
 
+<img src="media/simple_net.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+### Knoten und Kanten
+
+<pre><code data-trim data-noescape>
+  A,B
+  A,C
+  B,C
+  D,A
+  D,E
+  D,B
+  D,C
+  F,G
+  H,B
+</code></pre>
+
+--
+
+### ... dasselbe Netzwerk ...
+
+<img src="media/random.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+### ... erneut dasselbe ...
+
+<img src="media/circle.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+### ... again ...
+
+<img src="media/network-regular.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+### ... and again ...
+
+<img src="media/network-line.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+### ... und nochmal
+
+<img src="media/modularity.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+### ... dasselbe (?) Netzwerk als bipartites Netzwerk
+
+<img src="media/bipartite.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;">
 
 ---
 
-### Verfahren
+## Netzwerke
 
-Knoten Kanten und Tabellen
+- Uni- oder n-partite
+- Gerichtete, ungerichtete Kanten
+- Gewichtete Kanten und/oder Knoten
+- Layoutalgorithmen / -verfahren
+- Metriken
+  - Degree
+  - Betweenness
+  - PageRank
+  - etc.
 
----
 
-Rolle der Visualisierung
+--
+
+  <img src="media/network.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+<img src="media/metrics.png" style="height: 300px; margin: 0 auto 4rem auto; background: transparent;">
 
 
----
-
-### Palladio
+--
 
 
+Metriken (und ihr sinnvoller Einsatz) sind abhängig davon, welches Netzwerk vorliegt (gerichtet/ungerichtet, bi-/unipartite)
+
+--
+
+<img src="media/network_undirected.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
+
+--
+
+<img src="media/metrics_undirected.png" style="height: 300px; margin: 0 auto 4rem auto; background: transparent;">
+
+
+--
+
+### ... erneut dasselbe Netzwerk; Kanten gewichtet nach PageRank
+
+<img src="media/ranked.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;">
 
 
 ---
 
 ### Gephi
 
-[Homepage & download](https://mimno.github.io/Mallet/)
+[Download](https://gephi.org/users/download/)
 
-[Tutorial und Hinweise zur Installation](https://programminghistorian.org/en/lessons/topic-modeling-and-mallet)
-
---
-
-Topic Modeling Voltaire's letters 1770–1771
-
-1470 Briefe
+[Tutorials und Sammlungen](https://gephi.org/users/)
 
 --
 
-Input data & Preprocessing
+### Voltaires Korrespondenz
 
-<pre><code data-trim data-noescape>
-bin\mallet import-dir --input Voltaire --output voltaire.mallet --keep-sequence --stoplist-file stopwords-fr.txt
-</code></pre>
-
---
-
-Train model
-
-<pre><code data-trim data-noescape>
-  bin\mallet train-topics  --input voltaire.mallet --num-topics 20 --output-state topic-state.gz --output-topic-keys voltaire_topics.txt --output-doc-topics voltaire_composition.txt
-  </code></pre>
+1825 [Knoten]() (Personen)
+21257 [Kanten]() (Briefe)
 
 --
 
-Topics
+<img src="media/network-voltaire.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
 
-<img src="media/topics.png" style="height: 350px; margin: 0 auto 4rem auto; background: transparent;">
 
 --
 
-Verteilung auf Dokumente
-
-<img src="media/distribution.png" style="height: 300px; margin: 0 auto 4rem auto; background: transparent;">
+### Korrespondenznetzwerk
+https://www.martingrandjean.ch/gephi-introduction/
 
 --
 
-Eine (etwas unsinnige) Visualisierung
+<img src="media/network-modularity.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
 
-<img src="media/voltaire-line.png" style="height: 400px; margin: 0 auto 4rem auto; background: transparent;">
+--
 
+### Bi-partites Netzwerk
 
----
+Horaz in Voltaires Korrespondez
 
-### Further reading
+190 [Knoten]() -- 123 Personen, 67 Texte
+450 [Kanten]()
 
-Blei, David M.: Probabilistic Topic Models (2012) [pdf](https://dl.acm.org/doi/pdf/10.1145/2133806.2133826)
+--
 
-Shawn Graham, Scott Weingart,  Ian Milligan: Getting Started with Topic Modeling and MALLET (2012) [html](https://programminghistorian.org/en/lessons/topic-modeling-and-mallet)
+<img src="media/network-horace.png" style="height: 600px; margin: 0 auto 4rem auto; background: transparent;">
 
-Lisa M. Rhody: Topic Modeling and Figurative Language (2021) [html](https://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/)
-
-Shadrova, Anna: Topic models do not model topics: epistemological remarks and steps towards best practices (2021) [html](https://jdmdh.episciences.org/8608)
-
-Ted Underwood: Topic modeling made just simple enough (2012) [html](https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
 
 ---
 
 ## Danke für die Aufmerksamkeit
 
-09.01.2024: Netzwerkvisualierung ([Gephi](https://gephi.org/))
+[Evaluationsfragebogen](https://cloud.r0manist.de/index.php/apps/forms/s/NjiBpFF5QGzpSNSPEqFiXsyo)
 
 
 </section>
