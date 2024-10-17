@@ -1,0 +1,191 @@
+id;label;type
+1;??;person
+2;???;person
+3;Algarotti;person
+4;Allamand;person
+5;Audibert;person
+6;baron de Montpéroux;person
+7;Capacelli;person
+8;Capperonnier de Gauffecourt;person
+9;Carlo Goldoni;person
+10;Caylus;person
+11;Charles Bordes;person
+12;Charles Étienne Pesselier;person
+13;Charles Pinot Duclos;person
+14;Charles Porée;person
+15;Christin;person
+16;Cideville;person
+17;Claude Brossette;person
+18;Clément;person
+19;Condorcet;person
+20;Constant de Rebecque;person
+21;Créqui-Monfort;person
+22;Cromot Du Bourg;person
+23;d’Argenson;person
+24;d’Argental;person
+25;d’Hornoy;person
+26;d'Alembert;person
+27;Damilaville;person
+28;d'Argental;person
+29;Darget;person
+30;de Bernis;person
+31;de Brosses;person
+32;de Châteauvieux;person
+33;de Chennevières;person
+34;de Crousaz;person
+35;de La Chau;person
+36;de La Marche;person
+37;de Lisle;person
+38;de Montenoy;person
+39;de Ruffey;person
+40;de Rulhière;person
+41;de Sade;person
+42;de Seytres;person
+43;de Tressan;person
+44;Delacroix;person
+45;Desmahis/Cuyret de Margency;person
+46;Diderot;person
+47;d'Olivet;person
+48;Domenico Passionei;person
+49;Dortous de Mairan;person
+50;Du Plessis-Villette;person
+51;duc de Choiseul;person
+52;Durey de Mesnières;person
+53;Élie Bertrand;person
+54;Élie de Beaumont;person
+55;Étienne Pasquier;person
+56;Formey;person
+57;Formont;person
+58;Francis Hastings;person
+59;François Louis Defresnay;person
+60;François Tronchin;person
+61;Frederick II;person
+62;Freiesleben;person
+63;George Keate;person
+64;Giuseppe Colpani;person
+65;Grimm;person
+66;Guy de Chabanon;person
+67;Helvétius;person
+68;Hénault;person
+69;Jean Bretin;person
+70;Jean de Vaines;person
+71;Jean Marie Arnoult;person
+72;Johann Samuel König;person
+73;John Hervey;person
+74;Joseph de Menoux;person
+75;La Chalotais;person
+76;La Harpe;person
+77;Laus de Boissy;person
+78;Le Bault;person
+79;Le Blanc;person
+80;Le Nouvelliste du Parnasse;person
+81;Lebrun;person
+82;M. Berger;person
+83;M. Favières;person
+84;Maillet Du Boullay;person
+85;Marin;person
+86;Marmontel;person
+87;marquis d’Argens;person
+88;marquis de Pompignan;person
+89;marquis de Thibouville;person
+90;marquise d’Épinay;person
+91;Maupertuis;person
+92;Maurice de Saxe;person
+93;Mercier Dupaty;person
+94;Morellet;person
+95;Niklaus Friedrich Steiger;person
+96;Paradis de Moncrif;person
+97;Paul Claude Moultou;person
+98;Paul Desforges-Maillard;person
+99;Pierre Michel Hennin;person
+100;Pierre Samuel Du Pont de Nemours;person
+101;Podewils;person
+102;R.;person
+103;René Joseph Tournemine;person
+104;Richelieu;person
+105;Rolland Puchot, comte Des Alleurs;person
+106;Saurin;person
+107;Sauvé;person
+108;Sébastien Dupont;person
+109;Sénac de Meilhan;person
+110;Shuvalov;person
+111;Simon Louis Pierre de Cubières;person
+112;Sir Everard Fawkener;person
+113;Théodore Tronchin;person
+114;Thieriot;person
+115;Tronchin;person
+116;Trublet;person
+117;Trudaine de Montigny;person
+118;Turgot;person
+119;Vauvenargues;person
+120;von Schönberg;person
+121;Ximénès;person
+122;Paolo Emilio Campi;person
+123;Odes III,29;poem
+124;Epistles I,1;poem
+125;Epistles I,4;poem
+126;Odes I,1;poem
+127;Epistles I,6;poem
+128;Odes III,8;poem
+129;Epistles I,12;poem
+130;Epistles I,10;poem
+131;Odes III,9;poem
+132;Satires II,3;poem
+133;Odes II,6;poem
+134;Satires I,1;poem
+135;Art poétique;poem
+136;Odes II,18;poem
+137;Odes I,3;poem
+138;Odes II,16;poem
+139;Odes IV,12;poem
+140;Epistles II,1;poem
+141;Odes III,3;poem
+142;Odes IV,3;poem
+143;Epistles I,7;poem
+144;Odes II,3;poem
+145;Epistles I,9;poem
+146;Satires II,6;poem
+147;Odes II,1;poem
+148;Odes I,24;poem
+149;Satires I,4;poem
+150;Epistles II,2;poem
+151;Odes III,1;poem
+152;Epistles I,20;poem
+153;Odes III,24;poem
+154;Epistles I,3;poem
+155;Satires I,6;poem
+156;Epistles I,18;poem
+157;Epodes 2;poem
+158;Satires II,2;poem
+159;Odes II,4;poem
+160;Satires I,3;poem
+161;Epistles I,2;poem
+162;Odes, I,1;poem
+163;Epistles I,13;poem
+164;Satires I,10;poem
+165;Odes III,4;poem
+166;Odes III,2;poem
+167;Odes I,9;poem
+168;Epistles I,11;poem
+169;Epistles I,17;poem
+170;Odes II,10;poem
+171;Odes I,4;poem
+172;Odes IV,1;poem
+173;Odes III,16;poem
+174;Odes II,14;poem
+175;Satires I,9;poem
+176;Satires I,2;poem
+177;Odes IV,9;poem
+178;Epistles I,19;poem
+179;Satires II,1;poem
+180;Satires I,5;poem
+181;Odes II,12;poem
+182;Odes IV,8;poem
+183;Odes I,2;poem
+184;Epistles I,8;poem
+185;Odes I,22;poem
+186;Odes I,37;poem
+187;Odes IV,11;poem
+188;Odes III,22;poem
+189;Epistles I,14;poem
+190;Odes IV,2;poem
